@@ -34,7 +34,8 @@ object ConsoleApp extends ZIOAppDefault {
 object DiscordApp extends ZIOAppDefault {
   private val slashCommands = SlashCommands.apply(
     Chunk(
-      Time
+      Time,
+      SampleGameCommandHandler,
     )
   )
 
