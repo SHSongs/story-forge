@@ -57,8 +57,7 @@ With Story Forge, mission steps are clearly organized, providing a more manageab
 ### Demo
 - [Wadi D Operation | Trailer](https://www.youtube.com/watch?v=o6OABgB9C3w)
 
-## Contributors
-
+## Special thanks
 - [AloneDary](https://github.com/AloneDary)
 - [0pg](https://github.com/0pg)
 
