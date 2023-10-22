@@ -60,6 +60,7 @@ With Story Forge, mission steps are clearly organized, providing a more manageab
 ## Contributors
 
 - [AloneDary](https://github.com/AloneDary)
+- [0pg](https://github.com/0pg)
 
 ## License
 
