@@ -1,17 +1,11 @@
 package som.storyforge.example
 
+import izumi.reflect.Tag.*
+import som.storyforge.*
 import som.storyforge.AppConfig.configProvider
 import som.storyforge.ConsoleStoryForgeAppDefault.consolePreparedLayer
-import som.storyforge.{
-  DiscordAPIConfig,
-  DiscordClient,
-  DiscordInteractionService,
-  InteractionService,
-  Logging,
-  SlashCommands,
-}
-import zio._
-import izumi.reflect.Tag._
+import zio.*
+
 import java.time.{ZoneId, ZonedDateTime}
 
 object Calendar {
@@ -21,9 +15,12 @@ object Calendar {
 }
 
 object ConsoleApp extends ZIOAppDefault {
+  override val bootstrap =
+    Runtime.setConfigProvider(configProvider)
   val p = for {
     interactionService <- ZIO.service[InteractionService]
     ref <- Ref.make(0)
+    _ <- SampleGame(interactionService).loadGame(ref).ignore
   } yield ()
   override def run = p
     .provideSome[ZIOAppArgs](
@@ -35,7 +32,7 @@ object DiscordApp extends ZIOAppDefault {
   private val slashCommands = SlashCommands.apply(
     Chunk(
       Time,
-      SampleGameCommandHandler,
+      SampleGameCommandHandler
     )
   )
 

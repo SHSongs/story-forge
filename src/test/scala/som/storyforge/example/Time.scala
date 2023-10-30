@@ -1,15 +1,10 @@
 package som.storyforge.example
 
-import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
-import som.storyforge.{
-  DiscordInteractionService,
-  DiscordSlashCommand,
-  SlashCommandHandler
-}
-import som.storyforge.SlashCommandOption
-import som.storyforge.StoryForgeDiscord.InputString
-import zio._
 import net.dv8tion.jda.api.EmbedBuilder
+import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
+import som.storyforge.StoryForgeDiscord.InputString
+import som.storyforge.{DiscordInteractionService, DiscordSlashCommand, SlashCommandHandler, SlashCommandOption}
+import zio.*
 
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter

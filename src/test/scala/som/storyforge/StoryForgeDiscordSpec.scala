@@ -1,7 +1,10 @@
+package som.storyforge
+
 import net.dv8tion.jda.api.entities.emoji.Emoji
+import som.storyforge.StoryForgeDiscordSpec.{suite, test}
 import som.storyforge.{ConsoleInteractionService, InteractionService}
-import zio._
-import zio.test._
+import zio.*
+import zio.test.*
 
 object StoryForgeDiscordSpec extends ZIOSpecDefault {
 

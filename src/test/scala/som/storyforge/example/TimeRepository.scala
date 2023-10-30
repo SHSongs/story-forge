@@ -1,6 +1,6 @@
 package som.storyforge.example
 
-import zio._
+import zio.*
 
 import java.time.LocalDate
 
